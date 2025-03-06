@@ -9,9 +9,11 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+# expo router
+expo-env.d.ts
 
-
-
+# firebase/supabase/vexo
+.env
 
 ios
 android

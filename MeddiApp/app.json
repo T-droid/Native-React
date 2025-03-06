@@ -4,15 +4,26 @@
     "slug": "MeddiApp",
     "version": "1.0.0",
 
+    "scheme": "MeddiApp",
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
-
+    "plugins": [
+      "expo-router",
+      [
+        "expo-dev-launcher",
+        {
+          "launchMode": "most-recent"
+        }
+      ]
+    ],
     "experiments": {
+      "typedRoutes": true,
+
       "tsconfigPaths": true
     },
-
-    "plugins": [],
 
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -33,7 +44,6 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
-    },
-    "newArchEnabled": true
+    }
   }
 }

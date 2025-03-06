@@ -3,8 +3,19 @@
   "projectName": "MeddiApp",
   "packages": [
     {
+      "name": "expo-router",
+      "type": "navigation",
+      "options": {
+        "type": "stack"
+      }
+    },
+    {
       "name": "nativewind",
       "type": "styling"
+    },
+    {
+      "name": "supabase",
+      "type": "authentication"
     }
   ],
   "flags": {
@@ -13,7 +24,7 @@
     "overwrite": false,
     "importAlias": true,
     "packageManager": "npm",
-    "eas": false
+    "eas": true
   },
   "packageManager": {
     "type": "npm",
