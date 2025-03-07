@@ -5,10 +5,10 @@ export default function Index() {
   return (
     <View className={styles.container}>
       <Text className={styles.text}>Hello, world!</Text>
-      <Link href={'/sign-in'}>Sign in</Link>
-      <Link href={'/explore'}>Explore</Link>
-      <Link href={'/profile'}>Profile</Link>
-      <Link href={'/properties/1'}>Property</Link>
+      <Link href="/sign-in">Sign in</Link>
+      <Link href="/explore">Explore</Link>
+      <Link href="/profile">Profile</Link>
+      <Link href="/properties/1">Property</Link>
     </View>
   );
 }
