@@ -25,6 +25,7 @@ export default function OnBoardingLayout() {
             <Stack.Screen name="welcome" options={{ headerShown: false }} />
             <Stack.Screen name="preferredName" options={{ headerShown: false }} />
             <Stack.Screen name="weightGoal" options={{ headerShown: false }} />
+            <Stack.Screen name="preconditions" options={{ headerShown: false }} />
             <Stack.Screen name="muscleGoal" options={{ headerShown: false }} />
             <Stack.Screen name="gender" options={{ headerShown: false }} />
             <Stack.Screen name="signup" options={{ headerShown: false }} />

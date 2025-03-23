@@ -93,8 +93,8 @@ export default function WeightGoal() {
    * 
    * @returns {void}
    */
-  const handleSubmit = () => {
-    router.push('/(authflow)/(onboarding)/muscleGoal');
+  const handleSubmit = (): void => {
+    router.push('/(authflow)/(onboarding)/preconditions');
   }
   
   return (
