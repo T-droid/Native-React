@@ -21,20 +21,18 @@ export default function Index() {
         checkLoggedIn();
     }, []);
 
-    return <Redirect href='/(authflow)/(onboarding)/welcome' />;
+    if (hasCompletedOnBoarding === null || isLoggedIn === null) {
+        // Optionally, you can return a loading indicator here
+        return null;
+    }
 
-    // if (hasCompletedOnBoarding === null || isLoggedIn === null) {
-    //     // Optionally, you can return a loading indicator here
-    //     return null;
-    // }
+    if (!hasCompletedOnBoarding) {
+        return <Redirect href='/(authflow)/(onboarding)/welcome' />;
+    }
 
-    // if (!hasCompletedOnBoarding) {
-    //     return <Redirect href='/(authflow)/(onboarding)/welcome' />;
-    // }
+    if (!isLoggedIn) {
+        return <Redirect href='/(authflow)/(login)/login' />;
+    }
 
-    // if (!isLoggedIn) {
-    //     return <Redirect href='/(authflow)/(login)/login' />;
-    // }
-
-    // return <Redirect href='/(tabs)/home' />;
+    return <Redirect href='/(tabs)/home' />;
 }
