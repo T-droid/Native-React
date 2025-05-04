@@ -1,17 +1,24 @@
-import { GlobalProvider } from '@/lib/globalProvider';
 import '../global.css';
-import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+
 import { useEffect } from 'react';
+import { useFonts } from 'expo-font';
+import { Stack } from 'expo-router';
+
+import * as SplashScreen from "expo-splash-screen";
+
+export const unstable_settings = {
+  // Ensure that reloading on `/modal` keeps a back button present.
+  initialRouteName: '(tabs)',
+};
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
-    'Rubik-Bold': require('../assets/fonts/Rubik-Bold.ttf'),
-    'Rubik-ExtraBold': require('../assets/fonts/Rubik-ExtraBold.ttf'),
-    'Rubik-Light': require('../assets/fonts/Rubik-Light.ttf'),
-    'Rubik-Medium': require('../assets/fonts/Rubik-Medium.ttf'),
-    'Rubik-Regular': require('../assets/fonts/Rubik-Regular.ttf'),
-    'Rubik-SemiBold': require('../assets/fonts/Rubik-SemiBold.ttf'),
+    "Rubik-Bold": require("../assets/fonts/Rubik-Bold.ttf"),
+    "Rubik-ExtraBold": require("../assets/fonts/Rubik-ExtraBold.ttf"),
+    "Rubik-Light": require("../assets/fonts/Rubik-Light.ttf"),
+    "Rubik-Medium": require("../assets/fonts/Rubik-Medium.ttf"),
+    "Rubik-Regular": require("../assets/fonts/Rubik-Regular.ttf"),
+    "Rubik-SemiBold": require("../assets/fonts/Rubik-SemiBold.ttf"),
   });
 
   useEffect(() => {
@@ -24,10 +31,9 @@ export default function RootLayout() {
     return null;
   }
   return (
-    <GlobalProvider>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(root)" options={{ headerShown: false }} />
-      </Stack>
-    </GlobalProvider>
+    <Stack>
+      <Stack.Screen name="(root)" options={{ headerShown: false }} />
+      <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
+    </Stack>
   );
 }

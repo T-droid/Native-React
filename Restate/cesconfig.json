@@ -1,5 +1,5 @@
 {
-  "cesVersion": "2.12.3",
+  "cesVersion": "2.14.1",
   "projectName": "Restate",
   "packages": [
     {
@@ -20,7 +20,8 @@
     "overwrite": false,
     "importAlias": true,
     "packageManager": "npm",
-    "eas": true
+    "eas": false,
+    "publish": false
   },
   "packageManager": {
     "type": "npm",

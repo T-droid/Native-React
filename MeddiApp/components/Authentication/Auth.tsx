@@ -13,7 +13,7 @@ AppState.addEventListener('change', (state) => {
   } else {
     supabase.auth.stopAutoRefresh()
   }
-})
+});
 
 export default function Auth() {
   const [email, setEmail] = useState('')
